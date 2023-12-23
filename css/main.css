@@ -132,6 +132,7 @@ a {
   border-radius: 50%;
 }
 /* 세부내용 */
+
 .desc_section_activity {
   display: flex;
   flex-direction: column;
@@ -185,7 +186,7 @@ a {
 .des_dot_wrapper > p::before {
   position: absolute;
   left: -0.5em;
-  top: 0.6em;
+  top: 0.7em;
   height: 0.3em;
   width: 0.3em;
   content: " ";
