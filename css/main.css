@@ -120,7 +120,6 @@ li {
 }
 a {
   color: #5e63aa;
-  text-decoration: none;
 }
 .link_wrapper::after {
   position: absolute;

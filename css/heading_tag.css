@@ -12,8 +12,10 @@
 .desc_title_wrapper h2 {
   width: fit-content;
   padding: 0.3em 1em;
-  background: linear-gradient(to right, #e55d87, #5fc3e4);
-  box-shadow: 0 2px 25px rgba(231, 129, 162, 0.5);
+  /* background: linear-gradient(to right, #e55d87, #5fc3e4); */
+  background-color: #8f6894;
+
+  box-shadow: 0 2px 25px rgba(165, 129, 231, 0.5);
   border-radius: 0.5em;
 }
 
