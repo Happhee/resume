@@ -21,24 +21,53 @@
   font-style: normal;
 }
 :root {
-  --accent: #5e63aa;
+  --darkpink: #fc7474;
+  --pink: #fd916c;
+  --lightpink: #fc9f80;
   --background: #fcfcfc;
   --color: #1e2027;
-  --time-color: rgb(51, 51, 51);
+  --title-color: #facfcf;
+
+  --h2-color: #fc7474;
+  --h2-background: #facfcf;
+  --accent-link: #e07777;
+
   font-family: "NanumSquareRound";
 }
+@media screen {
+  .yellow {
+    /* --background: #e5e569; */
+    --background: #e08282;
+    --color: #fffafa;
+    --darkpink: #f1ff72;
+    --pink: #edf0b8;
+    --lightpink: #fc9f80;
+    --title-color: #facfcf;
+
+    --h2-color: #fc7474;
+    --h2-background: #facfcf;
+
+    --accent-link: rgb(244, 190, 190);
+  }
+}
+body {
+  background-color: var(--background);
+  /* color: var(--color); */
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
   font-family: "SOYOMapleBoldTTF";
+  /* color: var(--color); */
 }
 
 main {
   max-width: 70rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 header {
   display: flex;
@@ -49,13 +78,8 @@ header {
   line-height: 1.2;
 }
 
-header > img {
-  border-radius: 20%;
-  filter: drop-shadow(5px 5px 5px hsl(280, 43%, 84%));
-}
-
 .main_title {
-  text-shadow: 4px 4px #d3ccd4;
+  text-shadow: 4px 4px var(--title-color);
 }
 
 .profile-article {
@@ -91,7 +115,7 @@ header > img {
 }
 .desc_root_wrapper > h2 {
   font-family: "KCC-Ganpan";
-  color: #5e63aa;
+  color: var(--darkpink);
   font-size: 3em;
 }
 .desc_section_wrapper {
@@ -119,7 +143,7 @@ li {
   margin-left: 1.3em;
 }
 a {
-  color: #5e63aa;
+  color: var(--accent-link);
 }
 
 .link_wrapper::after {
@@ -139,8 +163,7 @@ a {
   gap: 20px;
 }
 .desc_section_activity h4 {
-  color: #8f6894;
-  text-shadow: 5px 5px #d3ccd4;
+  text-shadow: 2px 2px var(--text-shadow);
   margin: 0;
 }
 .desc_section_activity > p {
@@ -165,13 +188,19 @@ a {
 
   padding: 0.3em;
 }
+.desc_section_header {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.3em;
+}
+.link_icon {
+  text-decoration: none;
+}
+
 /* 프로젝트 별 상세 */
 .des-title {
   font-size: 20px;
   font-family: "SOYOMapleBoldTTF";
-
-  color: #5b425f;
-  text-shadow: 3px 3px #d3ccd4;
 }
 .des_dot_wrapper {
   position: relative;
@@ -183,7 +212,7 @@ a {
   font-family: "SOYOMapleBoldTTF";
 }
 .des-title::before,
-.des_dot_wrapper > p:first-child > ::before {
+.des_dot_wrapper > p:first-child::before {
   position: absolute;
   left: -0.5em;
   top: 0.7em;
@@ -193,25 +222,20 @@ a {
   font-size: 1em;
   text-align: center;
   border-radius: 50%;
-  background: #49116e;
+  background: var(--darkpink);
 }
 .des_content {
   line-height: 1.2;
   font-size: 1em;
 }
 
-body {
-  background-color: #f5f5bb;
-}
-
-.purple {
-  color: #8a5792;
+.pink {
+  color: var(--darkpink);
 }
 
 time,
 em {
   font-style: italic;
-  color: var(--time-color);
 }
 
 h1 {
@@ -256,8 +280,6 @@ ul.contact_list {
 
 /* 기술 */
 h5 {
-  color: #786894;
-  text-shadow: 5px 5px #d3ccd4;
   margin: 0;
 }
 .tech_stack {
@@ -265,23 +287,18 @@ h5 {
   gap: 0.5em;
 }
 mark {
-  color: white;
-  background-color: #cdaed1;
+  color: var(--darkpink);
+  background-color: var(--background);
   padding: 0.4em;
 
   border-radius: 10em;
   font-size: 15px;
-
-  box-shadow: 0 2px 16px rgba(225, 161, 181, 0.5);
 }
 
 .desc_section_activity__detail {
   display: flex;
   flex-direction: column;
   gap: 1em;
-}
-.desc_section_activity__detail p:nth-child(2) {
-  font-family: "SOYOMapleBoldTTF";
 }
 
 footer {
@@ -325,4 +342,68 @@ footer {
 
 .print {
   display: none;
+}
+
+.floating {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+}
+
+.floating > button {
+  background: transparent;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  background: var(--background);
+  border-radius: 50%;
+  padding: 0;
+}
+
+.floating > button:hover {
+  transform: rotate(30deg);
+}
+
+.floating > button:active {
+  transform: rotate(60deg);
+}
+
+.floating > button > img {
+  position: absolute;
+  inset: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  animation-name: toggle-in;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.floating > button > img.hide {
+  animation-name: toggle-out;
+}
+
+@keyframes toggle-out {
+  from {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes toggle-in {
+  from {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
 }

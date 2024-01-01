@@ -5,17 +5,16 @@
   cursor: pointer;
   appearance: none;
   border: none;
-  color: #ffffff;
+  color: var(--h2-color);
   margin-bottom: 20px;
 }
 
 .desc_title_wrapper h2 {
   width: fit-content;
-  padding: 0.3em 1em;
-  /* background: linear-gradient(to right, #e55d87, #5fc3e4); */
-  background-color: #8f6894;
+  padding: 0.4em 1em;
+  background-color: var(--h2-background);
 
-  box-shadow: 0 2px 25px rgba(165, 129, 231, 0.5);
+  box-shadow: 0 2px 8px var(--pink);
   border-radius: 0.5em;
 }
 
@@ -27,8 +26,8 @@
   display: inline;
   background-image: linear-gradient(
     to right,
-    rgb(118, 60, 161),
-    rgb(124, 97, 248)
+    var(--accent-link),
+    var(--lightpink)
   );
   background-size: 100% 15%;
   background-repeat: no-repeat;
