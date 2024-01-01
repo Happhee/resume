@@ -13,8 +13,18 @@ const typing = () => {
     main_title.innerHTML +=
       (main_title_txt === "\n" && "<br/>") ||
       (PURPLE_CONTETN.includes(main_title_txt) &&
-        `<span class='purple'>${main_title_txt}<span>`) ||
+        `<span class='pink'>${main_title_txt}<span>`) ||
       main_title_txt;
   }
 };
 setInterval(typing, 200);
+
+// const button = document.getElementById("scheme");
+// const buttonImages = [...button.children];
+
+// button.addEventListener("click", () => {
+//   buttonImages.forEach((image) => {
+//     image.classList.toggle("hide");
+//   });
+//   document.body.classList.toggle("yellow");
+// });
