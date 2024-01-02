@@ -284,10 +284,9 @@ h5 {
 }
 .tech_stack {
   display: flex;
-  gap: 0.5em;
+  gap: 0.1em;
 }
 mark {
-  color: var(--darkpink);
   background-color: var(--background);
   padding: 0.4em;
 
