@@ -110,8 +110,14 @@ header {
   line-height: 1.4;
 }
 
+.section_wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.3em;
+}
 .desc_root_wrapper {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .desc_root_wrapper > h2 {
   font-family: "KCC-Ganpan";
